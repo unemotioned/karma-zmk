@@ -1,9 +1,11 @@
-file_format: "1"
+file_format: '1'
 id: karma
 name: Karma
 type: shield
 url: https://github.com/achyudh/karma
-requires: [xiao_ble, xiao_ble//zmk]
+requires:
+  - xiao_ble
+  - xiao_ble//zmk
 features:
   - keys
 siblings:

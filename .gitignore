@@ -1,8 +1,8 @@
+*.DS_Store
 /.west
 /bootloader
+/build
 /modules
 /tools
 /zmk-config
-/build
-*.DS_Store
 __pycache__
