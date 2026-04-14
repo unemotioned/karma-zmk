@@ -101,10 +101,10 @@
 
         layger_0 {
             bindings = <
-&kp Q  &kp W           &kp E          &kp R          &kp T                                           &kp Y      &kp U          &kp I          &kp O           &kp P
-&kp A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &kp G                                           &kp H      &hrm_r LGUI J  &hrm_r LALT K  &hrm_r LCTRL L  &hrm_r LSHIFT SEMICOLON
-&kp Z  &kp X           &kp C          &kp V          &kp B                                           &kp N      &kp M          &kp COMMA      &kp DOT         &kp FSLH
-                                      &kp TAB        &mt LSHIFT BACKSPACE  &lt 1 ENTER    &lt 2 ESC  &kp SPACE  &kp F16
+&kp Q  &kp W           &kp E          &kp R          &kp T                                      &kp Y      &kp U          &kp I          &kp O           &kp P
+&kp A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &kp G                                      &kp H      &hrm_r LGUI J  &hrm_r LALT K  &hrm_r LCTRL L  &hrm_r LSHIFT SEMI
+&kp Z  &kp X           &kp C          &kp V          &kp B                                      &kp N      &kp M          &kp COMMA      &kp DOT         &kp SLASH
+                                      &kp TAB        &mt LSHIFT BSPC  &lt 1 ENTER    &lt 2 ESC  &kp SPACE  &kp F16
             >;
         };
 
