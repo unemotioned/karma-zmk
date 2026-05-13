@@ -61,16 +61,44 @@
             layers = <4>;
         };
 
+        sqt {
+            bindings = <&kp SQT>;
+            key-positions = <16 17>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            layers = <0 4>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <17 18>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            layers = <0 4>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <26 27>;
+            layers = <0 4>;
+        };
+
+        bslh {
+            bindings = <&kp BSLH>;
+            key-positions = <27 28>;
+            layers = <0 4>;
+        };
+
         lt {
             bindings = <&kp LT>;
             key-positions = <26 27>;
-            layers = <0 1 4 5>;
+            layers = <1 5>;
         };
 
         gt {
             bindings = <&kp GT>;
             key-positions = <27 28>;
-            layers = <0 1 4 5>;
+            layers = <1 5>;
         };
     };
 
