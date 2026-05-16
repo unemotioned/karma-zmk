@@ -18,17 +18,6 @@ source "$venv_dir/bin/activate"
 # source Zephyr SDK env var
 source "$SCRIPT_DIR/zephyr_env.sh"
 
-# remove Homebrew injected flags only for this script
-unset CFLAGS
-unset CPPFLAGS
-unset CXXFLAGS
-unset LDFLAGS
-unset CMAKE_OSX_ARCHITECTURES
-
-# export zephyr to use project zephyr
-export ZEPHYR_BASE="$ROOT_DIR/zephyr"
-export WEST_TOPDIR="$ROOT_DIR"
-
 # make sure west to use repo dir
 cd "$ROOT_DIR"
 
