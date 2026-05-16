@@ -107,21 +107,18 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp B &kp L &kp A &kp C &kp K &kp E &kp A &kp G &kp L &kp E &kp N1 &kp N0 &kp AT &kp I &kp C &kp L &kp O &kp U &kp D &kp DOT &kp C &kp O &kp M>;
-            label = "MY_EMAIL";
         };
 
         my_alias: my_alias {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(U) &kp N &kp LS(E) &kp M &kp O &kp T &kp I &kp O &kp N &kp E &kp LS(D)>;
-            label = "MY_ALIAS";
         };
     };
 
     behaviors {
         hrm_l: hrm_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -133,7 +130,6 @@
 
         hrm_r: hrm_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_R";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
