@@ -78,5 +78,17 @@ echo -e "\n----------------------------------------------\n"
 
 read -rp 'Open output directory with finder? [Y/n]: ' answer
 if [[ -z "${answer,,}" || "${answer,,}" == 'y' ]]; then
-    open ./output
+    if command -v nautilus &>/dev/null; then
+        nautilus ./output &
+    elif command -v thunar &>/dev/null; then
+        thunar ./output &
+    elif command -v dolphin &>/dev/null; then
+        dolphin ./output &
+    elif command -v xdg-open &>/dev/null; then
+        xdg-open ./output &
+    elif command -v open &>/dev/null; then
+        open ./output # macOS fallback
+    else
+        echo "No file manager found. Output is at: $(realpath ./output)"
+    fi
 fi
