@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+build_reset=false
+
 # NOTE: Change the keyboard names, controller type and etc from here.
 shield_left='karma_left'
 shield_right='karma_right'
 controller='xiao_ble//zmk'
-build_reset=false
+
 venv_dir="$HOME/venv/zmk"
 
 # absolute path to script's directory not where you ran it
