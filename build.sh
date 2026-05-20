@@ -6,7 +6,7 @@ build_reset=false
 # NOTE: Change the keyboard names, controller type and etc from here.
 shield_left='karma_left'
 shield_right='karma_right'
-controller='xiao_ble//zmk'
+board='xiao_ble//zmk'
 
 venv_dir="$HOME/venv/zmk"
 
@@ -29,26 +29,26 @@ SECONDS=0
 build_target() {
     local build_dir="$1"
     local shield="$2"
-    local controller="$3"
+    local board="$3"
 
     # NOTE: Add the following option in "$ west build" before the "--" to build cleanly
     # -p always \
     west build \
         -d "$build_dir" \
-        -b "$controller" \
+        -b "$board" \
         -s zmk/app \
         -- \
         -DSHIELD="$shield" \
         -DZMK_CONFIG="$ROOT_DIR/config" \
-        -DBOARD_ROOT="$PWD" \
+        -DBOARD_ROOT="$ROOT_DIR" \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 }
 
-build_target build/left "$shield_left" "$controller"
-build_target build/right "$shield_right" "$controller"
+build_target build/left "$shield_left" "$board"
+build_target build/right "$shield_right" "$board"
 
 if [ "$build_reset" = true ]; then
-    build_target build/settings_reset settings_reset "$controller"
+    build_target build/settings_reset settings_reset "$board"
 fi
 
 mkdir -p output/bak
